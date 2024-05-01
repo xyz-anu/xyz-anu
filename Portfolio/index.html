@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anushka's Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body{
+        background: linear-gradient(270deg, #ff994f, #fa6d86);
+      }
+      body,
+      html {
+        height: 100%;
+        font-family: "Inconsolata", sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      .bgimg {
+        background-position: center;
+        background-size: cover;
+        background-image: url("https://firebasestorage.googleapis.com/v0/b/portfolio-918.appspot.com/o/image.jpg?alt=media&token=e9968dca-5724-4c54-bb47-94c3e44ead72");
+        min-height: 100vh; /* This will make the image cover the full height of the viewport */
+      }
+
+      .menu {
+        display: none;
+      }
+
+      @media screen and (max-width: 768px) {
+        /* Adjustments for tablets and smaller devices */
+        .w3-col.s4 {
+          width: 100% !important;
+          text-align: center;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        /* Adjustments for mobile phones */
+        .w3-col.s4 img {
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .w3-col.s8 {
+          text-align: center;
+        }
+
+        .w3-col.s8 p {
+          text-align: left;
+        }
+      }
+      .container{
+    width: 90%;
+    height: 60vh;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow:  0px 5px 25px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inputBox{
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.inputBox input[type="text"], .inputBox input[type="email"]{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 0px 10px;
+    font-size: 16px;
+    color: #444;
+}
+
+.inputBox textarea{
+    width: 100%;
+    height: 120px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 0px 10px;
+    font-size: 16px;
+    color: #444;
+}
+
+.inputBox button{
+    width: 100%;    
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    background: rgb(0, 119, 255);
+    color: #FFF;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+.inputBox button:hover{
+    background: rgb(0, 17, 255);
+    transition: all 0.3s ease;
+}
+
+::placeholder{
+    font-size: 16px;
+}
+
+.alert{
+    width: 100%;
+    background: rgb(0, 255, 106);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 900;
+    display: none;
+}
+.container{
+  align-items: center;
+  background-color: rgb(86, 85, 85);
+  margin-left: 20px;
+}
+.sec5 {
+  font-family: "Outfit";
+  background: linear-gradient(#ffdad5, #fff7f9);
+  width: auto;
+}
+.contact-container {
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+.contact-left-title h2 {
+  font-weight: 600;
+  color: #a363aa;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+.contact-left-title hr {
+  border: none;
+  width: 120px;
+  height: 5px;
+  background-color: #a363aa;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.contact-input {
+  width: 400px;
+  height: 50px;
+  border: none;
+  outline: none;
+  padding-left: 25px;
+  font-weight: 500;
+  color: #666;
+  border-radius: 50px;
+}
+.contact-left textarea {
+  height: 140px;
+  padding-top: 15px;
+  border-radius: 20px;
+}
+.contact-input:focus {
+  border: 2px solid #ff994f;
+}
+.contact-input:placeholder {
+  color: #a9a9a9;
+}
+.contact-left button {
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  font-size: 16px;
+  color: #fff;
+  gap: 10px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(270deg, #ff994f, #fa6d86);
+  cursor: pointer;
+}
+.contact-left button img {
+  height: 15px;
+}
+.contact-right img {
+  width: 500px;
+}
+@media (max-width: 800px) {
+  .contact-input {
+    width: 80vw;
+  }
+  .contact-right {
+    display: none;
+  }
+}
+#title{
+   border-radius: 100px ;
+   background-color: #1c1c1c;
+   padding: 5px;
+}
+.logo{
+  padding: 9px;
+}
+    </style>
+  </head>
+  <body>
+    <!-- Links (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-row w3-padding w3-black">
+        <div class="w3-col s3">
+          <a href="#" class="w3-button w3-block w3-black">HOME</a>
+        </div>
+        <div class="w3-col s3">
+          <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+        </div>
+        <div class="w3-col s3">
+          <a href="#menu" class="w3-button w3-block w3-black"
+            >SKILLS</a
+          >
+        </div>
+        <div class="w3-col s3">
+          <a href="#contact" class="w3-button w3-block w3-black">CONTACT</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header with image -->
+    <header class="bgimg w3-display-container w3-grayscale-min" id="home">
+      <div
+        class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small"
+      >
+        <span class="w3-tag">Software Engineer</span>
+      </div>
+      <div class="w3-display-middle w3-center">
+        <span class="w3-text-black" style="font-size: 65px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"
+          ><strong>Welcome to <br> Anushka's Portfolio<br /></strong></span>
+          <span class="w3-text-black" style="font-size: 35px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"
+          >
+          Crafting Digital Experiences
+          </span>
+      </div>
+      <div class="w3-display-bottomright w3-center w3-padding-large">
+        <span class="w3-text-black">Web Developer</span>
+      </div>
+    </header>
+
+    <!-- Add a background color and large text to the whole page -->
+    <div class="w3-sand w3-grayscale w3-large">
+      <!-- About Container -->
+      <div class="w3-container" id="about">
+        <div class="w3-content w3-row">
+          <div class="w3-col s4">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/portfolio-918.appspot.com/o/1.jpeg?alt=media&token=33cea7cb-7538-4f99-9238-df6806e762d1"
+              alt="Your Image"
+              style="
+                width: 100%;
+                max-width: 300px;
+                border-radius: 50%;
+                margin-bottom: 10px;
+                margin-top: 194px;
+                margin-right: 90px;
+              "
+            />
+          </div>
+          <div class="w3-col s8">
+            <h5 class="w3-center w3-padding-48">
+              <span id="title" class="w3-tag w3-wide" style="margin-top: 40px"
+                >ABOUT ME</span
+              >
+            </h5>
+            <p class="lh-base" style="margin-left: 57px; margin-top: -25px;" style="text">
+              Welcome to my portfolio website! My name is Anushka Nevgi. I'm
+              passionate about web development and design. Currently I am a second year student from Sanjay
+              Ghodawat University studying engineering in computer science.This is the place
+              where I showcase my skills, projects, and experience. Feel free to
+              explore and get in touch with me to discuss potential
+              collaborations or opportunities.
+            </p>
+            <div
+              class="w3-panel w3-leftbar w3-light-grey"
+              style="margin-left: 57px"
+            >
+              <p>
+                <i>BTech in CSE from Sanjay Ghodawat University (9.02 CGPA)</i>
+              </p>
+              <p>
+                <i>Junior College from Arya International (79 %)</i>
+              </p>
+              <p>
+                <i>High School education from Don Bosco (94.80 %)</i>
+              </p>
+            </div>
+            <p style="margin-left: 57px">
+              <strong>Phone Number:</strong> 
+              <a href="tel:+919766150830">+91 9766150830</a>&nbsp;&nbsp;&nbsp;<br>
+              <strong>Email:</strong> 
+              <a href="mailto:anushkanevgi2910@gmail.com">anushkanevgi2910@gmail.com</a>
+            </p>            
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu Container -->
+      <div class="w3-container" id="menu">
+        <div class="w3-content" style="max-width: 700px">
+          <h5 class="w3-center w3-padding-48">
+            <span id="title" class="w3-tag w3-wide" style="margin-top: 40px"
+              >SKILLS AND PROJECTS</span
+            >
+          </h5>
+
+          <div class="w3-row w3-center w3-card w3-padding">
+            <a
+              href="javascript:void(0)"
+              onclick="openMenu(event, 'Eat');"
+              id="myLink"
+            >
+              <div class="w3-col s6 tablink">Skills / Certifications</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+              <div class="w3-col s6 tablink">Projects / Resume</div>
+            </a>
+          </div>
+
+          <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+            <!-- Coding -->
+            <h1><strong>Coding Skills</strong></h1>
+            <p>C Programming</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div
+                class="w3-container w3-center w3-round-xlarge w3-teal"
+                style="width: 80%"
+              >
+                80%
+              </div>
+            </div>
+            <p>Web Development (HTML & CSS)</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div
+                class="w3-container w3-center w3-round-xlarge w3-teal"
+                style="width: 65%"
+              >
+                <div class="w3-center w3-text-white">65%</div>
+              </div>
+            </div>
+            <p>C++ Programming</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div
+                class="w3-container w3-center w3-round-xlarge w3-teal"
+                style="width: 75%"
+              >
+                75%
+              </div>
+            </div>
+            <p>Java</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+              <div
+                class="w3-container w3-center w3-round-xlarge w3-teal"
+                style="width: 50%"
+              >
+                50%
+              </div>
+            </div>
+            <br />
+            <h1><strong>Certifications</strong></h1>
+            <h4><strong>Microsoft</strong></h4>
+            <p class="w3-text-grey">
+              <a href="https://firebasestorage.googleapis.com/v0/b/portfolio-918.appspot.com/o/Azure%20AI%20Fundamentals.pdf?alt=media&token=51ccb3dd-125f-4f1b-bb97-d40bd257e47d" target="_blank">Azure AI Fundamentals</a> 
+              &nbsp;&nbsp;<a href="https://firebasestorage.googleapis.com/v0/b/portfolio-918.appspot.com/o/AI900%20Microsoft%20Azure%20AI%20Fundamentals%20Transcript.pdf?alt=media&token=f8918e14-f42b-4ac6-ab2f-516e8df2298a" target="_blank">(Click here to see the Transcript) </a>
+            </p>
+            <br />
+            
+            <h4><strong>Acmegrade</strong></h4>
+            <p class="w3-text-grey">
+              <a href="https://firebasestorage.googleapis.com/v0/b/portfolio-918.appspot.com/o/Data%20Science.jpg?alt=media&token=8f51cbb8-4be6-484c-88db-ec4599532bb5" target="_blank">Data Science using Python training programme</a>
+            </p>
+            <br />
+            
+            <h4><strong>LinkedIn Learning</strong></h4>
+            <p class="w3-text-grey">
+              <a href="https://www.linkedin.com/learning/certificates/053d50f904ad412028c1139d6c9b5f8dee186795de6f767e530d94ed71289ef9" target="_blank">Programming Foundations: Fundamentals</a>
+            </p>
+            <br />
+            
+            <h4><strong>LinkedIn Learning</strong></h4>
+            <p class="w3-text-grey">
+              <a href="https://www.linkedin.com/learning/certificates/c367ea3ba7e0ea25258908a5d9e52f154b10d4293d050b20baf03af3306520b0?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B1cCptnQSQcG5CYQHXz%2Bokw%3D%3D" target="_blank">Programming Foundations: Beyond The Fundamentals</a>
+            </p>
+            <br />
+            
+            <h4><strong>IIP in association with Abhyuday IIT</strong></h4>
+            <p class="w3-text-grey">
+              <a href="https://firebasestorage.googleapis.com/v0/b/portfolio-918.appspot.com/o/iip.png?alt=media&token=054403ad-9743-417e-936d-e8fc1fb085bb" target="_blank">Placement Preparation Programme</a>
+            </p>
+            <br />
+            <!-- See all Certificates Button -->
+    <div class="w3-col s6" style="text-align: center;">
+      <a href="link_to_your_resume_on_firebase" class="w3- w3-white" download></a> 
+    </div>
+          </div>
+          <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+            <h5>Mini Project on C</h5>
+            <p class="w3-text-grey">School Management System</p>
+            <br />
+
+            <h5>Mini Project on C with DSA</h5>
+            <p class="w3-text-grey">Graph-maker and Analyst</p>
+            <br />
+
+            <h5>Mini Project on C++</h5>
+            <p class="w3-text-grey">C++ Learning and Assessment System</p>
+            <br />
+
+            <h5>Ongoing Mini Project on AI (Data Science)</h5>
+            <p class="w3-text-grey">
+              Survey of Sugarcane farmers and factories and solve their real
+              world problem
+            </p>
+            <br />
+            <!-- Download Resume Button -->
+    <div class="w3-col s6" style="text-align: center; ">
+     <a href="https://firebasestorage.googleapis.com/v0/b/portfolio-918.appspot.com/o/Anushka's%20Resume.pdf?alt=media&token=5b3270cc-c2cc-4c46-b61d-a8bf3e8a9696" target="_blank"" class="w3-button w3-black" download>See Resume</a>
+    </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact/Area Container -->
+      <section class="sec5" id="contact">
+        <div class="contact-container">
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            class="contact-left"
+          >
+          <br>
+            <div class="contact-left-title" style="margin-top: 35px;">
+              <h2>Get in Touch</h2>
+              
+            </div>
+            <input
+              type="hidden"
+              name="access_key"
+              value="f960b94e-a6f3-478b-8e07-d3abe035c33b"
+            />
+            <input type="text" name="name" placeholder="Your Name"
+            class="contact-input" required / > <input type="email" name="email"
+            placeholder="Your Email" class="contact-input" required / >
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              class="contact-input"
+              required
+            ></textarea>
+            <button type="submit">
+              Submit
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/portfolio-9caa7.appspot.com/o/arrow_icon.png?alt=media&token=8a811b17-12ef-4f08-aab2-cae539d5ac11"
+                alt=""
+              />
+            </button>
+            <br>
+            <br>
+          </form>
+        </div>
+              <!-- Footer -->
+              <footer class="w3-container w3-dark-grey w3-center w3-margin-top">
+              <p><h3>Find me here!</h3></p>
+              <a class="logo" href="https://www.facebook.com/profile.php?id=100083641307610" target="_blank" class="w3-hover-opacity"><i class="fa fa-facebook-official fa-2x"></i></a> 
+              <a class="logo" href="https://www.instagram.com/anushkanevgi" target="_blank" class="w3-hover-opacity"><i class="fa fa-instagram fa-2x"></i></a>
+              <a class="logo" href="https://www.snapchat.com/add/anushkanevgii?share_id=zw-_1qf_bCE&locale=en-IN" target="_blank" class="w3-hover-opacity"><i class="fa fa-snapchat fa-2x"></i></a>
+              <a class="logo" href="https://www.linkedin.com/in/anushka-nevgi-695937244/" target="_blank" class="w3-hover-opacity"><i class="fa fa-linkedin fa-2x"></i></a>
+              <a class="logo" href="https://github.com/xyz-anu" target="_blank" class="w3-hover-opacity"><i class="fa fa-github fa-2x"></i></a>
+              <h1> </h1>
+            </footer>
+        </section>
+    <script>
+      // Tabbed Menu
+      function openMenu(evt, menuName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("menu");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < x.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(
+            " w3-dark-grey",
+            ""
+          );
+        }
+        document.getElementById(menuName).style.display = "block";
+        evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+      }
+      document.getElementById("myLink").click();
+    </script>
+</html>
